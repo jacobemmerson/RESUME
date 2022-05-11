@@ -30,8 +30,6 @@
             font-family: 'Cormorant', serif;
             color: white;
             margin: auto;
-            max-width: 800px;
-            max-height: 600px;
         }
 
 
@@ -41,7 +39,6 @@
 
         h2 {
             font-size: 36px;
-            text-decoration: underline;
         }
 
         h3 {
@@ -53,6 +50,10 @@
             line-height:0px;
             padding:0;
             display:block;
+        }
+
+        ul {
+            list-style: square;
         }
         
         .content {
@@ -77,9 +78,46 @@
             line-height:12px;
         }
 
+        .wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .leftContainer {
+            opacity: 0;
+            flex: 2;
+            text-align: center;
+            animation: fadeIn 1s normal;
+            animation-delay: 1.8s;
+            animation-fill-mode: forwards;
+        }
+
+        .leftContainer ul {
+            line-height: 24px;
+            list-style: none;
+            margin: auto
+        }
+
+        .middleContainer {
+            flex: 3;
+        }
+
+        .rightContainer {
+            opacity: 0;
+            flex: 2;
+            text-align: center;
+            animation: fadeIn 1s normal;
+            animation-delay: 1.8s;
+            animation-fill-mode: forwards;
+        }
+
         section {
             opacity: 0;
-            animation: fadeIn 0.9s 1;
+            animation: fadeIn 1s 1;
             animation-fill-mode: forwards;
         }
 
@@ -103,6 +141,8 @@
             animation: myName 2s normal;
         }
 
+       
+
         @keyframes fadeIn {
             0% {
                 opacity: 0.0;
@@ -119,7 +159,7 @@
                 opacity: 0;
             }
 
-            50% {
+            40% {
                 transform: translateY(40vh);
                 opacity: 1;
             }
@@ -133,89 +173,119 @@
 </head>
 
 <body>
-    <h1 id="myName">Jacob Emmerson</h1>
-    <section class="container-header">
-        <div class="container-socials">
+    <div class="wrapper">
+        <div class="leftContainer">
+            <div>
+                <ul>
+                    <li>
+                        <h3>Contact Info</h3>
+                    </li>
+                    <li>
+                        (563) 726 - 9927
+                    </li>
+                    <li>
+                        beyurr@gmail.com
+                    </li>
+                    <li>
+                        https://dowkzy.live/
+                    </li>
+                    <li>
+                        https://github.com/jacobemmerson/
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <section class="container-education">
-        <h2>
-            Education
-        </h2>
-        <div class="content">
-            <h3>Pine-Richland High School</h3>
-            <em>High-School Diploma</em>
-            <ul>
-                <li>
-                    3.8 UW / 4.2 W GPA
-                </li>
-                <li>
-                    Distinction of Highest Honor Roll
-                </li>
-                <li>
-                    Co-President of French Club; Community Outreach Director for Anatomy Club
-                </li>
-            </ul>
+        <div class="middleContainer">
+            <h1 id="myName">Jacob Emmerson</h1>
+            <section class="container-header">
+                <div class="container-socials">
+                </div>
+            </section>
+            <section class="container-education">
+                <h2>
+                    Education
+                </h2>
+                <div class="content">
+                    <h3>Pine-Richland High School</h3>
+                    <em>High-School Diploma</em>
+                    <ul>
+                        <li>
+                            3.8 UW / 4.2 W GPA
+                        </li>
+                        <li>
+                            Distinction of Highest Honor Roll
+                        </li>
+                        <li>
+                            Co-President of French Club; Community Outreach Director for Anatomy Club
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <h3>University of Pittsburgh</h3>
+                    <em>B.S. Computer Science</em>
+                    <ul>
+                        <li>
+                            3.68 GPA
+                        </li>
+                        <li>
+                            Fall 2021 Dean's List
+                        </li>
+                        <li>
+                            Communications Officer for the Rainbow Alliance
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="container-experience">
+                <h2>
+                    Experience
+                </h2>
+                <div class="content">
+                    <h3>
+                        Starbucks
+                    </h3>
+                    <em>Barista</em>
+                    <ul>
+                        <li>
+                            Serve coffee and smiles to thousands of customers each day while prioritzing every guest is well served and satisfied.
+                        </li>
+                        <li>
+                            Memorize hundreds of drink recipes to make sure each handcrafted drink is made to perfection
+                        </li>
+                        <li>
+                            Frequently clean and supply the floor while preparing for mid-day rushes
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="container-skills">
+                <h2>
+                    Skills & Interests
+                </h2>
+                <div class="content">
+                    <em>
+                        Skills
+                    </em>
+                    <ul>
+                        <li>
+                            Python, HTML, Java; some C#; Customer service; planning & organization; Powerpoint, Excel, Word; Adobe Photoshop, Premiere Pro, and After Effects
+                        </li>
+                    </ul>
+                    <em>
+                        Interests
+                    </em>
+                    <ul>
+                        <li>
+                            Web design; nutritional science; coffee; traveling; video editing; streaming; drawing
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
-        <div class="content">
-            <h3>University of Pittsburgh</h3>
-            <em>B.S. Computer Science</em>
-            <ul>
-                <li>
-                    3.67 GPA
-                </li>
-                <li>
-                    Fall 2021 Dean's List
-                </li>
-                <li>
-                    Communications Officer for the Rainbow Alliance
-                </li>
-            </ul>
+        <div class="leftContainer">
+            <div>
+            </div>
         </div>
-    </section>
-    <section class="container-experience">
-        <h2>
-            Experience
-        </h2>
-        <div class="content">
-            <h3>
-                Starbucks
-            </h3>
-            <em>Barista</em>
-            <ul>
-                <li>
-                    Serve coffee and smiles to thousands of customers each day while prioritzing every guest is well served and satisfied.
-                </li>
-                <li>
-                    Memorize hundreds of drink recipes to make sure each handcrafted drink is made to perfection
-                </li>
-                <li>
-                    Frequently clean and supply the floor while preparing for mid-day rushes
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="container-skills">
-        <h2>
-            Skills & Interests
-        </h2>
-        <div class="content">
-            <em>
-                Skills
-            </em>
-            <ul>
-                <li>
-                    Python, HTML, Java; some C#; Customer service; planning & organization; Powerpoint, Excel, Word; Adobe Photoshop, Premiere Pro, and After Effects
-                </li>
-            </ul>
-            <em>
-                Interests
-            </em>
-            <ul>
-                <li>
-                Web design; nutritional science; coffee; traveling; video editing; streaming; drawing</li>
-            </ul>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
